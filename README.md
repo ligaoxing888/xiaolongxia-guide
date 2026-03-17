@@ -41,7 +41,7 @@ https://articles.zsxq.com/id_mwwwwcf6sq94.html
 |------|------|
 | Mac 电脑 | M 系列或 Intel 都可以 |
 | iPhone | 充值 Claude 订阅需要在手机端操作 |
-| 梯子 | 需要稳定，设置**全局 + Tun 模式**，推荐 cordc.net |
+| 梯子 | 需要稳定，设置**全局  模式** |
 | 备用 AI | Claude.ai / ChatGPT / 豆包，遇到问题随时问 |
 | 时间 | 约 3 小时 |
 
