@@ -15,8 +15,6 @@
 
 Codex 免费版自带完整开发环境（Node.js 等），刚好能跑小龙虾的安装命令。**你不需要懂编程，不需要自己装 Node.js，像装微信一样操作就行。**
 
-**一句话总结：用免费 Codex 当"装修队长"，帮你把小龙虾装好。**
-
 ---
 
 ## ⚠️ 开始前确认
@@ -46,17 +44,11 @@ Codex 免费版自带完整开发环境（Node.js 等），刚好能跑小龙虾
 
 ## 第二步：下载安装 Codex App（2 分钟）
 
-两种方式任选：
-
-**方式 A：从 ChatGPT 侧栏进入**
-- 点击左侧「Codex」→ 弹窗提示下载 → 点「下载 macOS 版」
+1. 点击 ChatGPT 左侧「Codex」
+2. 弹窗提示下载应用，点「下载 macOS 版」
+3. 下载后打开 .dmg，把 Codex 拖到「应用程序」文件夹
 
 ![Codex 下载提示](images/codex-tutorial/02-codex-download-prompt.jpg)
-
-**方式 B：直接下载**
-- https://persistent.oaistatic.com/codex-app-prod/Codex.dmg
-
-下载后打开 .dmg，把 Codex 拖到「应用程序」文件夹。
 
 ---
 
@@ -66,13 +58,11 @@ Codex 免费版自带完整开发环境（Node.js 等），刚好能跑小龙虾
 2. 选择「Sign in with ChatGPT」
 3. 用刚注册的免费账号登录
 
-登录后会看到 Codex 主界面：
-
 ![Codex 主界面](images/codex-tutorial/03-codex-main-interface.jpg)
 
 ---
 
-## 第四步：安装小龙虾（5 分钟）
+## 第四步：用 Codex 安装小龙虾（5 分钟）
 
 在 Codex 里新建一个任务，输入：
 
@@ -80,23 +70,14 @@ Codex 免费版自带完整开发环境（Node.js 等），刚好能跑小龙虾
 请帮我安装 openclaw（小龙虾），一个 AI 助手框架。
 安装命令是：npm install -g openclaw
 安装完成后，运行 openclaw setup 进行初始化配置。
+我需要连接 Telegram，请引导我完成。
 ```
 
-Codex 会自动执行。遇到确认提示都选「Approve」。
+Codex 会在它自己的界面里自动执行所有命令。遇到确认提示都选「Approve」。
 
-> 💡 Codex 自带 Node.js 环境，不需要你单独安装。
+> 💡 整个安装和配置过程都在 Codex 里完成，你不需要打开终端，也不需要自己敲任何命令。Codex 会一步步引导你，包括连接 Telegram、配置 API Key 等。
 
-安装完后继续输入：
-
-```
-运行 openclaw setup，帮我完成配置。我需要连接 Telegram。
-```
-
-按提示操作即可。你需要准备：
-- 一个 Telegram 账号
-- 一个 AI 模型的 API Key（Codex 会引导你获取）
-
-配置完成后运行 `openclaw gateway start`，你的小龙虾就活了 🦞
+全部配置完成后，Codex 会帮你运行 `openclaw gateway start`——你的小龙虾就活了 🦞
 
 ---
 
@@ -105,44 +86,46 @@ Codex 会自动执行。遇到确认提示都选「Approve」。
 ![Codex 使用额度](images/codex-tutorial/05-codex-usage-quota.jpg)
 
 - 免费版有**每周使用限额**，额度每周重置
-- 安装小龙虾只需要几次对话，**绰绑有余**
-- 安装完成后小龙虾独立运行，不依赖 Codex
+- 安装小龙虾只需要几次对话，**绑绑有余**
+- 装好后小龙虾独立运行，不依赖 Codex
 - 日常维护偶尔打开 Codex 调整也够用
 
 ---
 
-## 和主教程方案的区别
+## 优缺点对比：Codex 方案 vs 主教程方案
 
-| | 主教程（Claude Code） | 本方案（Codex） |
-|---|---|---|
-| 费用 | ¥950/月 | 0 元 |
-| 安装工具 | Claude Code | Codex App |
-| AI 模型 | Claude Opus（最强） | GPT-5.4（免费版） |
-| 使用限制 | Max 套餐额度内不限 | 每周有免费限额 |
-| 适合谁 | 要顶配体验的人 | 先试试、预算有限的人 |
+### ✅ Codex 方案的优点
+- **完全免费**，不需要任何付费订阅
+- **不需要装 Node.js**，Codex 自带开发环境
+- **不需要海外手机号和信用卡**
+- 10 分钟搞定，门槛极低
 
-**核心区别：** 主教程花钱买的是小龙虾运行时用的 AI 模型（Claude Opus）。本方案用 Codex 只是安装工具——**小龙虾装好之后，你仍然需要一个 AI 模型来驱动它。**
+### ❌ Codex 方案的缺点
+- Codex 免费版有**每周使用限额**，重度使用会碰到天花板
+- 安装工具用的是 GPT-5.4，不是最强模型
+- **小龙虾装好后仍然需要一个 AI 模型驱动它**——免费模型体验有限，顶配体验需要另外付费
 
-如果你只是想先把小龙虾装上、体验一下再决定要不要投入，这个方案适合你。
+### ✅ 主教程方案的优点
+- 用 **Claude Opus**（目前最强 AI 模型之一），思考质量明显更高
+- Claude Max 套餐额度充裕，不用担心限额
+- 从安装到日常使用全链路打通，体验完整
+
+### ❌ 主教程方案的缺点
+- **每月 ¥950**
+- 需要海外手机号注册 Claude
+- 需要信用卡或 Apple Store 支付
+
+**建议：** 如果你想先试试小龙虾是什么感觉，用 Codex 方案零成本上手。体验好了、确定要长期用，再升级到主教程的顶配方案。
 
 ---
 
 ## 常见问题
 
 **Q：真的完全免费吗？**
-A：安装过程完全免费。但小龙虾运行需要 AI 模型 API，有很多免费额度的选择（如 Gemini 免费版）。顶配体验需要付费（Claude Max ¥950/月）。
-
-**Q：为什么不直接用终端安装？**
-A：可以！会用终端的话直接 `npm install -g openclaw` 更快。这篇是给不熟悉命令行的朋友准备的。
+A：安装过程完全免费。小龙虾装好后需要 AI 模型来驱动，GPT 免费版有免费额度可以先用着。如果想要更顶级的体验（Claude Opus），就需要付费订阅，具体看主教程。
 
 **Q：装完后 Codex App 还要保留吗？**
 A：小龙虾装好后独立运行，不依赖 Codex。但建议保留，以后升级维护很方便。
-
-**Q：Windows 能用吗？**
-A：目前 Codex App 只支持 macOS。Windows 用户可以用 Codex CLI（`npm i -g @openai/codex`），但需要先自己装 Node.js。
-
-**Q：会影响电脑上已有的程序吗？**
-A：不会。Codex App 和小龙虾都装在独立目录，互不干扰。
 
 ---
 
@@ -160,9 +143,7 @@ A：不会。Codex App 和小龙虾都装在独立目录，互不干扰。
 
 - [主教程：完整安装路径（¥950/月顶配方案）](README.md)
 - [OpenClaw 官方文档](https://docs.openclaw.ai)
-- [OpenClaw GitHub](https://github.com/openclaw/openclaw)
 - [Codex 官方](https://chatgpt.com/codex)
-- [ChatGPT 注册](https://chatgpt.com)
 
 ---
 
