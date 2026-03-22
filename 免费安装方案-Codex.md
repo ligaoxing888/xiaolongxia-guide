@@ -1,166 +1,154 @@
-# 零成本安装小龙虾：用 Codex 免费搞定全流程
+# 🦞 免费安装小龙虾（OpenClaw）— Codex 方案
 
-> 作者：高兴 | 灵感来源：小鑫实测
-> 适用人群：想零成本体验小龙虾的朋友
-
----
-
-## 这个方案解决什么问题？
-
-之前的安装教程需要订阅 Claude Max（$125/月起），对很多想先试试的朋友来说门槛太高。
-
-小鑫帮朋友安装小龙虾时发现：**OpenAI 的 Codex 目前对免费 GPT 账号限时开放**，用它来安装小龙虾，全程不花一分钱，不用打开终端，不用懂代码。
-
-核心原理：Codex 是 OpenAI 的编程智能体。你在它的对话框里说"帮我装小龙虾"，它就帮你全搞定——装依赖、跑命令、改配置，你只需要不停点确认。
+> **实测验证**：2026年3月22日，我们用免费 ChatGPT 账号完整走通了全流程。  
+> **适用系统**：macOS（Apple Silicon / Intel 均可）  
+> **费用**：0 元  
+> **耗时**：约 10 分钟
 
 ---
 
-## ⚠️ 重要提醒
+## 💡 这个方案的原理
 
-1. **"限时免费"**：OpenAI 官方原文 "For a limited time, try Codex for free in ChatGPT Free"，这个免费窗口随时可能关闭。趁还在，赶紧用。
-2. **免费版模型是 GPT-5.3**，不是 5.4。5.4 需要 Plus（$20/月）以上。但 5.3 日常已经够强了。
-3. **免费额度有限**，但实测足够完成一次完整安装。
-4. **需要科学上网**，这个自行解决。
+OpenAI 的 Codex（编程 AI 助手）可以免费使用，而 Codex App 内置了完整的开发环境（Node.js 等），刚好能跑小龙虾。**你不需要懂编程，像装微信一样操作就行。**
 
 ---
 
-## 你需要准备什么
+## 第一步：注册免费 ChatGPT 账号
 
-- **Mac 电脑**（M 系列芯片，即 2020 年底之后的 Mac）
-- **科学上网工具**（需要稳定连接）
-- **一个邮箱**（注册 GPT 账号用）
-- **时间：约 30–60 分钟**
+打开 https://chatgpt.com ，点「免费注册」，用邮箱注册即可。
 
----
+> ⚠️ 需要能收验证码的邮箱（推荐 Gmail）
 
-## 第一步：注册免费 GPT 账号
+注册成功后，你会看到这样的界面——注意左下角显示「**免费版**」，侧栏有「**Codex**」入口：
 
-1. 打开 https://chatgpt.com
-2. 点击 **Sign up**，用邮箱注册
-3. 完成验证，登录进去
-
-**不需要付费，不需要绑卡，免费账号就够。**
+![ChatGPT 免费版主页，左下角显示"免费版"，侧栏有 Codex 入口](images/codex-tutorial/01-chatgpt-free-homepage.jpg)
 
 ---
 
 ## 第二步：下载 Codex App
 
-1. 打开 https://developers.openai.com/codex/quickstart
-2. 点击 **Download for macOS**
-3. 下载完成后，双击 .dmg 文件，把 Codex 拖到"应用程序"文件夹
-4. 打开 Codex App
+两种方式任选：
 
-**就像装微信、装 QQ 一样，下载 → 拖进去 → 打开。**
+**方式 A：从 ChatGPT 侧栏进入**
+1. 点击左侧「Codex」
+2. 弹窗提示下载应用，点「下载 macOS 版」
 
----
+![Codex 下载提示](images/codex-tutorial/02-codex-download-prompt.jpg)
 
-## 第三步：登录
+**方式 B：直接下载**
+- 下载链接：https://persistent.oaistatic.com/codex-app-prod/Codex.dmg
 
-打开 Codex 后，它会弹出登录页面：
-- 选择用 **ChatGPT 账号登录**
-- 授权确认
-
-登录完就直接进入对话界面了，跟 ChatGPT 的聊天框一模一样。
+下载完成后，打开 .dmg 文件，把 Codex 拖到「应用程序」文件夹。
 
 ---
 
-## 第四步：让 Codex 帮你装小龙虾
+## 第三步：登录 Codex App
 
-在对话框里输入：
+1. 打开「应用程序」中的 **Codex**
+2. 选择「Sign in with ChatGPT」
+3. 用刚才注册的免费账号登录
 
-> 我要在这台 Mac 上安装 OpenClaw（小龙虾）。安装命令是 `curl -fsSL https://openclaw.ai/install.sh | bash`。请帮我完成完整的安装和初始配置。如果过程中需要安装 Node.js 或其他依赖，请自动处理。
+登录后你会看到 Codex 主界面，可以连接 GitHub 或直接开始：
 
-然后 Codex 就开始干活了。**遇到需要确认的地方，点 Yes / Approve 就行。**
-
-整个过程你不需要：
-- ❌ 打开终端
-- ❌ 知道什么是 Node.js
-- ❌ 手动输入任何命令
-
-Codex 会自动处理所有依赖安装、环境配置。
-
-> 💡 遇到报错不要慌，Codex 会自动尝试解决。如果它没自动处理，把报错截图发给它就行。
+![Codex 主界面](images/codex-tutorial/03-codex-main-interface.jpg)
 
 ---
 
-## 第五步：创建 Telegram Bot
+## 第四步：安装小龙虾
 
-小龙虾装好后，需要创建一个 Telegram 机器人来对话。
+在 Codex 里新建一个任务，输入以下指令：
 
-继续在 Codex 里说：
+```
+请帮我安装 openclaw（小龙虾），一个 AI 助手框架。
+安装命令是：npm install -g openclaw
+安装完成后，运行 openclaw setup 进行初始化配置。
+```
 
-> 帮我创建一个 Telegram Bot。我需要去 Telegram 找 @BotFather，教我怎么做。
+Codex 会自动执行安装。如果它问你任何确认，都选「Approve」。
 
-Codex 会告诉你具体步骤：
-1. 下载 Telegram（https://telegram.org）
-2. 搜索 @BotFather
-3. 发送 /newbot
-4. 给机器人起个名字
-5. 复制返回的 Bot Token
-
-拿到 Token 后，回到 Codex：
-
-> 帮我把这个 Telegram Bot token 配置到 OpenClaw 里：[粘贴你的 token]
+> 💡 Codex 自带 Node.js 环境，不需要你单独安装任何东西。
 
 ---
 
-## 第六步：配置模型
+## 第五步：配置小龙虾
 
-小龙虾需要接入 AI 模型才能对话。在 Codex 里说：
+安装完成后，在 Codex 里继续输入：
 
-> 帮我给 OpenClaw 配置一个免费的 AI 模型，让我的 Telegram 机器人能回复消息。
+```
+运行 openclaw setup，帮我完成配置。
+我需要连接 Telegram，请引导我完成。
+```
 
-Codex 会帮你搞定。
-
-**想要更强的模型？** 如果后续愿意付费，可以接入 Claude Opus（目前思考质量最强的模型），参考我之前写的完整教程。
-
----
-
-## 搞定！🎉
-
-去 Telegram 跟你的机器人发条消息试试。能回复了，你的小龙虾就活了。
+按照提示操作即可。你需要准备：
+- 一个 Telegram 账号
+- 一个 AI 模型的 API Key（Codex 会引导你获取）
 
 ---
 
-## 这个方案 vs 原方案对比
+## 第六步：开始使用
 
-| | 免费 Codex 方案 | Claude Max 方案 |
-|---|---|---|
-| 费用 | ¥0（限时） | $125/月起 |
-| 安装时间 | 30–60 分钟 | 2–3 小时 |
-| 安装难度 | 不用开终端 | 需要终端操作 |
-| 小龙虾的模型 | GPT-5.3（免费）| Claude Opus（最强）|
-| 适合谁 | 想先体验 | 长期重度使用 |
+配置完成后，运行：
 
-**建议：** 先用免费方案跑起来体验，觉得好用了再考虑升级。
+```
+openclaw gateway start
+```
+
+你的小龙虾就活了！🦞
 
 ---
 
-## 常见问题
+## 📊 免费版额度说明
 
-**Q：免费额度用完了怎么办？**
-Codex 的免费额度主要用来安装。装好之后小龙虾独立运行，日常对话消耗的是你接入的模型额度，和 Codex 没关系了。
+免费 ChatGPT 账号的 Codex 有每周使用限额，实测截图如下：
 
-**Q：限时免费什么时候结束？**
-OpenAI 没给具体日期，只说 "for a limited time"。建议趁早。
+![Codex 使用额度 - 每周限额和代码审查各 100%](images/codex-tutorial/05-codex-usage-quota.jpg)
 
-**Q：Windows 能用吗？**
-Codex App 目前主要支持 macOS。Windows 用户可以用 Codex CLI（需要一点命令行基础）。
+- **每周使用限额**：有限但够用（安装小龙虾只需要几次对话）
+- **代码审查**：单独的额度池
+- 额度每周重置
 
-**Q：之后想换成 Claude 模型怎么办？**
-随时可以。小龙虾的模型配置是可以改的，让 Codex 帮你改就行。
-
-**Q：GPT-5.3 和 Claude Opus 差别大吗？**
-Claude Opus 在深度思考、长文写作、复杂推理上更强。GPT-5.3 日常用也很好。先用起来，体验差异后再决定。
+> 对于安装和配置小龙虾来说，免费额度绑绑有余。日常维护偶尔打开 Codex 调整一下也够用。
 
 ---
 
-## 致谢
+## ⚙️ Codex 设置（可选）
 
-这个方案是小鑫在帮朋友安装小龙虾时发现的。感谢小鑫的分享，让更多人能零门槛体验。
+登录后可以在设置页面自定义 Codex 的行为：
+
+![Codex 设置页面](images/codex-tutorial/04-codex-settings.jpg)
+
+- **自定义指令**：可以写上「请用中文回复」
+- **环境**：可以配置运行环境
+- **连接器**：可以连接 GitHub
 
 ---
 
-先养起来再说，等你发现这只虾真的好用，再给它升级装备。
+## ❓ 常见问题
 
-公众号搜「李高兴」关注我，养龙虾系列持续更新中 🦞
+**Q：真的完全免费吗？**  
+A：是的。ChatGPT 免费账号可以使用 Codex，OpenClaw 本身也是免费开源的。唯一可能的费用是 AI 模型的 API（但有很多免费额度的选择）。
+
+**Q：为什么不直接用终端安装？**  
+A：可以！如果你会用终端，直接 `npm install -g openclaw` 更快。这个教程是给不熟悉命令行的朋友准备的。
+
+**Q：安装后 Codex App 还需要保留吗？**  
+A：小龙虾安装完就是独立运行的，不依赖 Codex。但建议保留 Codex，以后维护升级很方便。
+
+**Q：Windows 能用吗？**  
+A：目前 Codex App 只支持 macOS。Windows 用户可以用 Codex CLI（`npm i -g @openai/codex`），但需要先自己安装 Node.js。
+
+**Q：会影响我电脑上已有的程序吗？**  
+A：不会。Codex App 是独立应用，小龙虾也安装在独立目录，互不干扰。
+
+---
+
+## 🔗 相关链接
+
+- [OpenClaw 官方文档](https://docs.openclaw.ai)
+- [OpenClaw GitHub](https://github.com/openclaw/openclaw)
+- [Codex 官方文档](https://platform.openai.com/docs/codex/overview)
+- [ChatGPT](https://chatgpt.com)
+
+---
+
+> 📸 本教程所有截图均为 2026年3月22日 实测拍摄，使用免费 ChatGPT 账号。
