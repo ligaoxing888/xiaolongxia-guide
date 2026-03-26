@@ -1,4 +1,4 @@
-# 🦞 零成本安装小龙虾（OpenClaw）— Codex 方案
+# 🦞 全网最简单+零成本+高效安装小龙虾（OpenClaw）方案（gpt版）
 
 > **实测验证**：2026年3月22日，免费 ChatGPT 账号完整走通全流程。
 > **适用系统**：macOS（Apple Silicon / Intel 均可）
